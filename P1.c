@@ -8,7 +8,7 @@ int main()
 {
 	char num[256];
 	int x = 0, r = 0;
-	printf_s("\nDigite o número binário: ");
+	printf_s("\nDigite o nÃºmero binÃ¡rio: ");
 	scanf_s("%s", &num);
 	for(int i = 0; num [i] != '\0'; i++)
 	{
@@ -24,8 +24,8 @@ int main()
 	
 	if(x == 0)
 	{
-	printf("O número binário %s é múltiplo de 3", num);
-	else printf("O número binário %s não é múltiplo de 3 e o resto da sua divisão por 3 é: %d", num, x);
+	printf("O nÃºmero binÃ¡rio %s Ã© mÃºltiplo de 3", num);
+	else printf("O nÃºmero binÃ¡rio %s nÃ£o Ã© mÃºltiplo de 3 e o resto da sua divisÃ£o por 3 Ã©: %d", num, x);
 	}
 	return 0;
 }
