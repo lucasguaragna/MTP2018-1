@@ -1,8 +1,7 @@
 //Nome: Lucas Guaragna Guedes	
 //Matricula: 11721EBI005
 
-#include <stdio.h>
-#include <locale.h> 
+#include <stdio.h> 
 
 int main()
 {
