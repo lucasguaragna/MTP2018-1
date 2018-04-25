@@ -1,5 +1,5 @@
 //Nome: Lucas Guaragna Guedes
-//Matrícula: 11721EBI005
+//MatrÃ­cula: 11721EBI005
 
 #include <stdio.h>
 
@@ -41,9 +41,9 @@ void decimal_para_binario(int vet[], int numdec)
 	int i = 0;
 	for (i = 0; numdec > 0; i++) 
 	{
-         vet[i] = numdec % 2;
-         numdec /=  2;
-    }
+        	vet[i] = numdec % 2;
+        	numdec /=  2;
+        }
 	for (int j = i - 1; j >= 0; j--) printf("%d", vet[j]);
 }
 
@@ -60,10 +60,10 @@ void decimal_para_hexadecimal(int vet[], int numdec)
 		if (vet[j] >= 0 && vet[j] <= 9) printf("%d", vet[j]);
 		if (vet[j] == 10) printf("a");
 		if (vet[j] == 11) printf("b");
-        if (vet[j] == 12) printf("c");
-        if (vet[j] == 13) printf("d");
-        if (vet[j] == 14) printf("e");
-        if (vet[j] == 15) printf("f");
+                if (vet[j] == 12) printf("c");
+                if (vet[j] == 13) printf("d");
+                if (vet[j] == 14) printf("e");
+                if (vet[j] == 15) printf("f");
 	}
 }
 
@@ -106,32 +106,32 @@ int main()
 		{
 		case 1:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        scanf("%s", &bits);
-	        getchar();
+	        	scanf("%s", &bits);
+	        	getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador de caracteres da string (cont)
 			printf("\n\nO binario digitado, convertido para decimal, sera: %d", binario_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 2:
 			//Binario --> Decimal --> Hexadecimal
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        scanf("%s", &bits);
-	        getchar();
+	        	scanf("%s", &bits);
+	        	getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			numdec = binario_para_decimal(bits,aux,cont,dec,pow,j);   // Binario --> Decimal
 			printf("\n\nO binario digitado, convertido para hexadecimal, sera: ");
 			decimal_para_hexadecimal(vet,numdec); // Decimal --> Hexadecimal 
 			break;
 		case 3:
-		    printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        scanf("%s", &bits);
-	        getchar();
+		        printf("\nDigite o valor desejado para conversao: "); // preencher a string
+	        	scanf("%s", &bits);
+	        	getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO hexadecimal digitado, convertido para decimal, sera: %d", hexadecimal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 4:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        scanf("%s", &bits);
-	        getchar();
+	        	scanf("%s", &bits);
+	        	getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO numero digitado, transformado para decimal, sera: ");
 			decimal_para_binario(vet, hexadecimal_para_decimal(bits, aux, cont, dec, pow, j));
@@ -150,8 +150,8 @@ int main()
 			break;
 		case 7:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        scanf("%s", &bits);
-	        getchar();
+	        	scanf("%s", &bits);
+	        	getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO octal digitado, convertido para decimal, sera: %d", octal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
