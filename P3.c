@@ -1,40 +1,38 @@
 //Nome: Lucas Guaragna Guedes
-//Matrícula: 11721EBI005
+//MatrÃ­cula: 11721EBI005
 
 
 #include <stdio.h>
 
-void decimal_para_binario(int vet[], int numdec) // Conversão de decimais POSITIVOS OU NEGATIVOS para binario
+void decimal_para_binario(int vet[], int numdec) // ConversÃ£o de decimais POSITIVOS OU NEGATIVOS para binario
 {
 	int j = 0, k = 0, i = 0, aux, nvet[256], cont = 0, vetaux[32];
 	if(numdec > 0) //POSITIVOS
 	{	
 		for (i = 0; numdec > 0; i++) 
 		{
-        	vet[i] = numdec % 2;
-         	numdec /=  2;
-    	}	
+        		vet[i] = numdec % 2;
+         		numdec /=  2;
+    		}	
 		for (int j = i - 1; j >= 0; j--) printf("%d", vet[j]);
 	}
 	else if(numdec < 0) //NEGATIVOS
 	{
 		aux = ((-numdec) - 1);
-
 		for (i = 0; aux > 1; i++) 
 		{
-        	vet[i] = aux % 2;
-         	aux /=  2;
-         	if(aux == 1)
-         	{	
+        		vet[i] = aux % 2;
+         		aux /=  2;
+         		if(aux == 1)
+         		{	
 			 	i++;
-         		vet[i] = aux;
+         			vet[i] = aux;
 			}
-    	}
-    	i--;
+    		}
+    		i--;
 		for(j = 0; j < 32; j++)
 		{
-			if(j < (32 - (i+1)))
-			 {nvet[j] = 0;}
+			if(j < (32 - (i+1))) nvet[j] = 0;
 			else 
 			{
 				nvet[j] = vet[i];
