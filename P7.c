@@ -7,9 +7,8 @@ int main()
 {
 	int m, n;
 	printf("******FUNCAO DE ACKERMANN******\n"
-		   "Digite, respectivamente, m e n: ");
-	scanf("%d %d", &m, &n);
-	getchar();
+	       "Digite, respectivamente, m e n: ");
+	scanf("%d %d", &m, &n); getchar();
 	printf("\n%d", A(m,n));
 	return 0;
 }
