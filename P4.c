@@ -12,13 +12,13 @@ int main ()
 	scanf("%s", &numero);	
 	for(int i = 0; numero[i] != '\0'; i++) //Percorre a string numero[256];
 	{	
-		if(numero[i] >= 48 && numero[i] <= 57) //De 48 a 57, encontram-se os números de 0 a 9 na tabela ASCII;
+		if(numero[i] >= 48 && numero[i] <= 57) //De 48 a 57, encontram-se os nÃºmeros de 0 a 9 na tabela ASCII;
 		{	
 			retorno[cont] = numero[i] - 48; //Se subtrairmos 48 desse 'char', obteremos um dado do tipo 'int';
 			cont++;	
 		}
 	}	
-	printf("\n\n'%s' retorna ", numero);
+	printf("\n");
 	for(int j = 0; j < cont; j++) printf("%d", retorno[j]); 
 	return 0;
 }
