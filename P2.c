@@ -24,14 +24,16 @@ int hexadecimal_para_decimal(char bits[], char aux[], int cont, int dec, int pow
 		if (aux[k] == '1') dec += pow; if (aux[k] == '2') dec += pow*2; if (aux[k] == '3') dec += pow*3;
 		if (aux[k] == '4') dec += pow*4; if (aux[k] == '5') dec += pow*5; if (aux[k] == '6') dec += pow*6;
 		if (aux[k] == '7') dec += pow*7; if (aux[k] == '8') dec += pow*8; if (aux[k] == '9') dec += pow*9;
-		if (aux[k] == 'a') dec += pow*10; if (aux[k] == 'b') dec += pow*11; if (aux[k] == 'c') dec += pow*12;
-		if (aux[k] == 'd') dec += pow*13; if (aux[k] == 'e') dec += pow*14; if (aux[k] == 'f') dec += pow*15;
+		if (aux[k] == 'a' || aux[k] == 'A') dec += pow*10; if (aux[k] == 'b' || aux[k] == 'B') dec += pow*11; 
+		if (aux[k] == 'c' || aux[k] == 'C') dec += pow*12; if (aux[k] == 'd' || aux[k] == 'D') dec += pow*13; 
+		if (aux[k] == 'e' || aux[k] == 'E') dec += pow*14; if (aux[k] == 'f' || aux[k] == 'F') dec += pow*15;
 	}
 	if (aux[0] == '1') dec += 1; if (aux[0] == '2') dec += 2; if (aux[0] == '3') dec += 3;
 	if (aux[0] == '4') dec += 4; if (aux[0] == '5') dec += 5; if (aux[0] == '6') dec += 6;
 	if (aux[0] == '7') dec += 7; if (aux[0] == '8') dec += 8; if (aux[0] == '9') dec += 9;
-	if (aux[0] == 'a') dec += 10; if (aux[0] == 'b') dec += 11; if (aux[0] == 'c') dec += 12;
-	if (aux[0] == 'd') dec += 13; if (aux[0] == 'e') dec += 14; if (aux[0] == 'f') dec += 15;
+	if (aux[0] == 'a' || aux[0] == 'A') dec += 10; if (aux[0] == 'b' || aux[0] == 'B') dec += 11; 
+	if (aux[0] == 'c' || aux[0] == 'C') dec += 12; if (aux[0] == 'd' || aux[0] == 'D') dec += 13; 
+	if (aux[0] == 'e' || aux[0] == 'E') dec += 14; if (aux[0] == 'f' || aux[0] == 'F') dec += 15;
 
 	return dec;
 }
@@ -41,9 +43,9 @@ void decimal_para_binario(int vet[], int numdec)
 	int i = 0;
 	for (i = 0; numdec > 0; i++) 
 	{
-        	vet[i] = numdec % 2;
-        	numdec /=  2;
-        }
+         vet[i] = numdec % 2;
+         numdec /=  2;
+    }	
 	for (int j = i - 1; j >= 0; j--) printf("%d", vet[j]);
 }
 
@@ -60,10 +62,10 @@ void decimal_para_hexadecimal(int vet[], int numdec)
 		if (vet[j] >= 0 && vet[j] <= 9) printf("%d", vet[j]);
 		if (vet[j] == 10) printf("a");
 		if (vet[j] == 11) printf("b");
-                if (vet[j] == 12) printf("c");
-                if (vet[j] == 13) printf("d");
-                if (vet[j] == 14) printf("e");
-                if (vet[j] == 15) printf("f");
+        if (vet[j] == 12) printf("c");
+        if (vet[j] == 13) printf("d");
+        if (vet[j] == 14) printf("e");
+        if (vet[j] == 15) printf("f");
 	}
 }
 
@@ -106,58 +108,56 @@ int main()
 		{
 		case 1:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits);
-	        	getchar();
+	        scanf("%s", &bits);
+	        getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador de caracteres da string (cont)
 			printf("\n\nO binario digitado, convertido para decimal, sera: %d", binario_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 2:
 			//Binario --> Decimal --> Hexadecimal
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits);
-	        	getchar();
+	        scanf("%s", &bits);
+	        getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			numdec = binario_para_decimal(bits,aux,cont,dec,pow,j);   // Binario --> Decimal
 			printf("\n\nO binario digitado, convertido para hexadecimal, sera: ");
 			decimal_para_hexadecimal(vet,numdec); // Decimal --> Hexadecimal 
 			break;
 		case 3:
-		        printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits);
-	        	getchar();
+		    printf("\nDigite o valor desejado para conversao: "); // preencher a string
+	        scanf("%s", &bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO hexadecimal digitado, convertido para decimal, sera: %d", hexadecimal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 4:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits);
-	        	getchar();
+	        scanf("%s", &bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO numero digitado, transformado para decimal, sera: ");
 			decimal_para_binario(vet, hexadecimal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 5:
 			printf("\nInsira o numero decimal: ");
-			scanf("%d", &numdec);
-			printf("\n\nO decimal digitado, convertido para binario, sera: ", numdec);
+			scanf("%d", &numdec); getchar();
+			printf("\n\nO decimal digitado, convertido para binario, sera: ");
 			decimal_para_binario(vet, numdec);
 			break;
 		case 6:
 			printf("\nInsira o numero decimal: ");
-			scanf("%d", &numdec);
-			printf("\n\nO decimal digitado, convertido para hexadecimal, sera: ", numdec);
+			scanf("%d", &numdec); getchar();
+			printf("\n\nO decimal digitado, convertido para hexadecimal, sera: ");
 			decimal_para_hexadecimal(vet, numdec);
 			break;
 		case 7:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits);
-	        	getchar();
+	        scanf("%s", &bits);
+	        getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO octal digitado, convertido para decimal, sera: %d", octal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 8:
 			printf("\nInsira o numero decimal: ");
-			scanf("%d", &numdec);
+			scanf("%d", &numdec); getchar();
 			printf("\n\nO decimal digitado, convertido para octal, sera: " );
 			decimal_para_octal(vet, numdec);
 			break;
@@ -166,3 +166,4 @@ int main()
 		}
     return 0;
 }
+	
