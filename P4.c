@@ -9,7 +9,7 @@ int main ()
 {	int retorno[256], cont = 0;
 	char numero[256];
 	printf("Digite um numero: ");
-	scanf("%s", &numero);	
+	scanf("%s", numero);	
 	for(int i = 0; numero[i] != '\0'; i++) //Percorre a string numero[256];
 	{	
 		if(numero[i] >= 48 && numero[i] <= 57) //De 48 a 57, encontram-se os números de 0 a 9 na tabela ASCII;
