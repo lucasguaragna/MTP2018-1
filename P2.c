@@ -108,14 +108,14 @@ int main()
 		{
 		case 1:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits); getchar();
+	        	scanf("%s", bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador de caracteres da string (cont)
 			printf("\n\nO binario digitado, convertido para decimal, sera: %d", binario_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 2:
 			//Binario --> Decimal --> Hexadecimal
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits); getchar();
+	        	scanf("%s", bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			numdec = binario_para_decimal(bits, aux, cont, dec, pow, j);   // Binario --> Decimal
 			printf("\n\nO binario digitado, convertido para hexadecimal, sera: ");
@@ -123,13 +123,13 @@ int main()
 			break;
 		case 3:
 		        printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	       	 	scanf("%s", &bits); getchar();
+	       	 	scanf("%s", bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO hexadecimal digitado, convertido para decimal, sera: %d", hexadecimal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
 		case 4:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits); getchar();
+	        	scanf("%s", bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO numero digitado, transformado para decimal, sera: ");
 			decimal_para_binario(vet, hexadecimal_para_decimal(bits, aux, cont, dec, pow, j));
@@ -148,7 +148,7 @@ int main()
 			break;
 		case 7:
 			printf("\nDigite o valor desejado para conversao: "); // preencher a string
-	        	scanf("%s", &bits); getchar();
+	        	scanf("%s", bits); getchar();
 			for (int i = 0; bits[i] != '\0'; i++, cont++); //  contador (cont)
 			printf("\n\nO octal digitado, convertido para decimal, sera: %d", octal_para_decimal(bits, aux, cont, dec, pow, j));
 			break;
