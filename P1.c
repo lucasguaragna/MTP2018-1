@@ -20,7 +20,7 @@ int main()
 	x = r;
 	r = 0;
 	}
-	if(x == 0) printf("O numero binario %s eh multiplo de 3", num);
-	else printf("O numero binario %s nao eh multiplo de 3 e o resto da sua divisao por 3 eh: %d", num, x);
+	if(x == 0) printf("eh multiplo de 3");
+	else printf("nao eh multiplo de 3");
 	return 0;
 }
