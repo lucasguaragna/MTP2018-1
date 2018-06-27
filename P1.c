@@ -8,7 +8,7 @@ int main()
 	char num[256];
 	int x = 0, r = 0;
 	printf("\nDigite o numero binario: ");
-	scanf("%s", &num);
+	scanf("%s", num);
 	for(int i = 0; num [i] != '\0'; i++)
 	{
 		if(num[i] == '0' && x == 0)r = 0;
