@@ -1,3 +1,5 @@
+//Lucas Guaragna Guedes
+//11721EBI005
 #include <stdio.h>
 #include <stdlib.h>
 void gera_numeros(float * vetor, int tam)
