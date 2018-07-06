@@ -38,7 +38,7 @@ void pesquisa(struct produto vet_produto[], int i)
 	char condicional[64];
 	strcpy(condicional, " ");
 	if(strcmp(condicional, vet_produto[i].nome) == 0) printf("\nProduto nao cadastrado!");
-	else printf("%s R$ %.2f L: %gm x P: %.2fm x A: %.2fm",vet_produto[i].nome, vet_produto[i].preco, vet_produto[i].end.largura, vet_produto[i].end.profundidade, vet_produto[i].end.altura);
+	else printf("%s R$ %.2f L: %gm x P: %.2fm x A: %.2fm", vet_produto[i].nome, vet_produto[i].preco, vet_produto[i].end.largura, vet_produto[i].end.profundidade, vet_produto[i].end.altura);
 }
 
 int main()
