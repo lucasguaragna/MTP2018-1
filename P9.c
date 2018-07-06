@@ -24,7 +24,7 @@ void cadastro(struct produto vet_produto[], int i)
 	printf("\nNome:");
 	fgets(vet_produto[i].nome, 64, stdin);
 	printf("\nPreco:");
-	scanf("%f", &vet_produto[i].preco);	getchar();
+	scanf("%f", &vet_produto[i].preco); getchar();
 	printf("\nLargura:");
 	scanf("%f", &vet_produto[i].end.largura); getchar();
 	printf("\nProfundidade:");
@@ -49,8 +49,8 @@ int main()
 	strcpy(vet_produto[0].nome, " ");
 	strcpy(vet_produto[1].nome, " ");
 	do{
-			printf("1 - Cadastro\n2 - Consulta\n3 - Sair\n\nDigite uma opcao: ");
-			scanf("%d", &opcao); getchar();  
+		printf("1 - Cadastro\n2 - Consulta\n3 - Sair\n\nDigite uma opcao: ");
+		scanf("%d", &opcao); getchar();  
 		switch(opcao)
 		{
 			case 1: 
