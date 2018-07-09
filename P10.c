@@ -26,16 +26,16 @@ void cadastra(Produto * p)
     p -> nome[strlen(p -> nome) - 1] = '\0';
 
     printf("\nDigite o preco: ");
-    scanf("%f", &(p->preco)); getchar();
+    scanf("%f", &(p -> preco)); getchar();
 
     printf("\nDigite a largura: ");
-    scanf("%f", &(p->dimensoes.largura)); getchar();
+    scanf("%f", &(p -> dimensoes.largura)); getchar();
 
     printf("\nDigite a profundidade: ");
-    scanf("%f", &(p->dimensoes.profundidade)); getchar();
+    scanf("%f", &(p -> dimensoes.profundidade)); getchar();
 
     printf("\nDigite a altura: ");
-    scanf("%f", &(p->dimensoes.altura)); getchar();
+    scanf("%f", &(p -> dimensoes.altura)); getchar();
 
 }
 
@@ -47,7 +47,7 @@ void consulta(Produto * p)
         printf("\nProduto nao cadastrado!\n");
         while((c = getchar()) != '\n');
         return;
-    }
+        }
     printf("\n%s, R$ %.2f, L: %.2fm x P: %.2fm x A: %.2fm\n", p -> nome, p -> preco,(p -> dimensoes.largura),(p -> dimensoes.profundidade), (p -> dimensoes.altura));
     while((c = getchar()) != '\n');
 }
@@ -60,7 +60,7 @@ int main(){
     Produto * produtos = (Produto *) calloc(1, sizeof(Produto));
     while(opt1 != 0)
 	{
-	    printf("\n=-=-=-=-=MENU=-=-=-=-=\n");
+	    printf("\n********* MENU *********\n");
         printf("Produtos em memoria: %d", np);
         printf("\n1. Consultar\n2. Cadastrar novo\n3. Carregar de arquivo para memoria (sobrescreve memoria)\n4. Salvar memoria em arquivo (sobrescreve arquivo)\n0. Sair\n> ");
         scanf("%d", &opt1); getchar();
@@ -69,13 +69,13 @@ int main(){
 		{
             case 1:
                 while(opt2 != 0)
-				{
-                	if(np == 0)
-					{
-                		printf("\nNenhum produto cadastrado!\n");
-                		while((c = getchar()) != '\n');
-                		break;
-					}
+		{
+                    if(np == 0)
+		        {
+               		printf("\nNenhum produto cadastrado!\n");
+               		while((c = getchar()) != '\n');
+               		break;
+			}
                     printf("\nConsulta de Produtos\n");
                     printf("\nProdutos em memoria: %d", np);
                     printf("\n0. Voltar");
